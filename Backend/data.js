@@ -1,11 +1,26 @@
+import bcrypt from 'bcryptjs';
 const data = {
+  users: [
+    {
+      name: 'Alex',
+      email: 'alluwa2127@gmail.com',
+      password: bcrypt.hashSync('Alexy2127'),
+      isAdmin: true,
+    },
+    {
+      name: 'John',
+      email: 'muhabaw2127@gmail.com',
+      password: bcrypt.hashSync('Alexy2127'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id:'1',
+      // _id:'1',
       name: 'Nike Slim shirt',
-      slug: 'nike-slim-shirt',
+      slug: 'nike-slim-shirt', //
       category: 'Shirts',
-      image: '/images/p1.jpg', // 679px × 829px => dimension
+      image: 'images/p7.png', // 679px × 829px => dimension
       price: 120,
       countInStock: 0,
       brand: 'Nike',
@@ -14,11 +29,11 @@ const data = {
       description: 'high quality shirt',
     },
     {
-      _id:'2',
+      //_id:'2',
       name: 'Adidas Fit Shirt',
       slug: 'adidas-fit-shirt',
       category: 'Shirts',
-      image: '/images/p2.jpg',
+      image: '/images/p8.png',
       price: 250,
       countInStock: 20,
       brand: 'Adidas',
@@ -27,11 +42,11 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id:'3',
+      // _id:'3',
       name: 'Nike Slim Pant',
       slug: 'nike-slim-pant',
       category: 'Pants',
-      image: '/images/p3.jpg',
+      image: '/images/p9.png',
       price: 25,
       countInStock: 15,
       brand: 'Nike',
@@ -40,11 +55,11 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id:'4',
+      //_id:'4',
       name: 'Adidas Fit Pant',
       slug: 'adidas-fit-pant',
       category: 'Pants',
-      image: '/images/p4.jpg',
+      image: '/images/p10.png',
       price: 65,
       countInStock: 5,
       brand: 'Puma',
